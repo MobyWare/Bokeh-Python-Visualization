@@ -1,0 +1,10 @@
+FROM registry.gitlab.zoll-lifevest.com/research/mli-codebank/ml-viz-sample:1.0.0-base
+
+RUN bokeh sampledata
+ADD ./interactive /opt/interactive
+
+WORKDIR /opt/interactive
+
+EXPOSE 8888
+
+CMD ["jupyter", "lab", "--port", "8888", "--NotebookApp.token=''"]

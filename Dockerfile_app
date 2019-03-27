@@ -1,0 +1,10 @@
+FROM registry.gitlab.zoll-lifevest.com/research/mli-codebank/ml-viz-sample:1.0.0-base
+
+RUN bokeh sampledata
+ADD ./bokeh_app /opt/bokeh_app
+
+EXPOSE 8080
+
+WORKDIR /
+
+CMD ["bokeh", "serve", "--port", "8080", "--show", "/opt/bokeh_app/"]

@@ -33,6 +33,9 @@ docker run -d -p 8888:8888 registry.gitlab.zoll-lifevest.com/research/mli-codeba
 |Application image|registry.gitlab.zoll-lifevest.com/research/mli-codebank/ml-viz-sample:1.0.0-app|
 |Notebook image|registry.gitlab.zoll-lifevest.com/research/mli-codebank/ml-viz-sample:1.0.0-notebook|
 
+# Known issue
+
+When running notebook may ask you to enter name because workspace is in use. Just enter arbitrary text in textbox.
 
 # References
 1. [Bokeh Python repo by Will Koehrsen](https://github.com/WillKoehrsen/Bokeh-Python-Visualization)
